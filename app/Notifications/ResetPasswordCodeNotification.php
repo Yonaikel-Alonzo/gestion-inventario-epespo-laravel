@@ -16,7 +16,7 @@ class ResetPasswordCodeNotification extends Notification
 
  public function toMail($notifiable)
 {
-    $frontend = rtrim(env('FRONTEND_URL', 'http://localhost:3000'), '/');
+    $frontend = rtrim(env('FRONTEND_URL', 'http://gestion-inventario-epespo.pages.dev'), '/');
 
     $actionUrl = $frontend . '/restablecer-contrasena?correo=' . urlencode($notifiable->correo);
 
